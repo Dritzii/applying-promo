@@ -16,20 +16,20 @@ class shopping():
             self.family = Family
             print("You have {} people in your family, You may be eligible for a discount :)".format(str(self.family)))
         else:
-            print("You are applying with no family members")
+            print("You are applying with no family members, you will not recieve a discount")
 
     def products(self,items=None):
-        self.items = items
-        self.cost = self.items * 20
+        self.items = items 
+        self.cost = self.items * 20 ## assuming each item costs 20 dollars
         try:
             print("Checking your products now")
-            if items is None:
+            if self.items is None:
                 print("You have not checked out any items")
                 return False
             elif self.age <= 13 and self.family <= 3:
                 print("You are eligible for a promo of 20% woo hoo")
                 self.cost *= 0.8
-                print("Now your cost is ${} yippee".format(str(self.cost)))
+                print("Now your cost is ${}".format(str(self.cost)))
                 return(self.items)
             elif self.age <= 15 and self.family <= 4:
                 print("You have a eligible discount of 50% :)")
