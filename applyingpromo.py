@@ -5,18 +5,15 @@ Author: John Pham
 """
 
 class shopping():
-    def __init__(self,Fname,Lname,Age,Family=None):
-        self.firstname = Fname
-        self.lastname = Lname
-        self.age = Age
-        print("Hello {} it is time to add you onto our system :)".format(str(Fname)))
-        if Family is None:
-            self.family = ''
-        elif Family is not None:
-            self.family = Family
-            print("You have {} people in your family, You may be eligible for a discount :)".format(str(self.family)))
+    def __init__(self,Family=None):
+        self.firstname = input("What is your first name? ")
+        self.lastname = input("What is your last name? ")
+        self.age = input("How old are you? ")
+        self.family = input("Do you have family? ")
+        if self.family in ['yes','ye','yeah']:
+            self.family = input("If so how many?" )
         else:
-            print("You are applying with no family members, you will not recieve a discount")
+            print("Hello {} it is time to add you onto our system :)".format(str(self.firstname)))
 
     def products(self,items=None):
         self.items = items
@@ -57,20 +54,9 @@ class shopping():
 
 
 def main():
-    JohnPham = shopping('John','Pham', 15, 4)
-    jphamproducts = JohnPham.products(6)
-
-
-
-
-
-
-
-
-
-
-
-
+    #JohnPham = shopping('John','Pham', 15, 4)
+    #jphamproducts = JohnPham.products(6)
+    jp = shopping()
 
 
 
