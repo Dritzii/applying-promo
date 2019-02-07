@@ -41,8 +41,9 @@ class shopping():
                 print("You have saved: ${}".format(self.cost - self.discount))
                 return(self.items)
             else:
-                print("You are not allowed a promotion :(, Promotions are only avaliable for families with kids and of a certain age")
-                return False
+                print("You are not allowed a discount :(, Promotions are only avaliable for families with kids and of a certain age")
+                return(self.cost)
+                print(self.cost)
         except:
             print("Error")
 
