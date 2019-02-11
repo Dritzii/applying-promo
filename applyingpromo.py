@@ -10,7 +10,7 @@ class shopping():
         self.lastname = input("What is your last name? ")
         self.age = int(input("How old are you? "))
         self.family = input("Do you have family? ")
-        if self.family in ['yes','ye','yeah']:
+        if self.family in ['yes','ye','yeah','yer','yas','yippie']:
             answer = input("If so how many? ")
             self.count = int(answer)
             if self.count <= 6:
@@ -53,8 +53,6 @@ class shopping():
         else:
             print("You are not allowed a discount :(, Promotions are only avaliable for families with kids and of a certain age")
             return(self.cost)
-            print(self.cost)
-        
 
         
 
@@ -66,7 +64,7 @@ class shopping():
 
 
 def main():
-    jp = shopping().products()
+    shopping().products()
 
 
 
